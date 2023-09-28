@@ -14,7 +14,6 @@ pipeline{
         stage('Setup Gunicorn Setup'){
             steps {
                 sh '''
-                cd scripts/
                 chmod +x gunicorn.sh
                 ./gunicorn.sh
                 '''

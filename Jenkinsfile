@@ -7,6 +7,7 @@ pipeline{
       steps  {
             sh '''
             cd scripts/
+            chmod +x nginx.sh
             ./envsetup.sh
             '''}
         }
@@ -14,6 +15,7 @@ pipeline{
             steps {
                 sh '''
                 cd scripts/
+                chmod +x nginx.sh
                 ./gunicorn.sh
                 '''
             }
